@@ -1,83 +1,60 @@
 import React from 'react';
+import DocumentUpload from '../components/DocumentUpload';
+import ChatbotIcon from '../components/ChatbotIcon';
 
 const Herosection = () => {
   return (
-    <div className=" flex items-center justify-center p-4 border mt-5">
+    <div className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 to-purple-600/5"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-200/20 rounded-full -translate-y-48 translate-x-48"></div>
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-purple-200/20 rounded-full translate-y-40 -translate-x-40"></div>
       
-      <div className=" z-10 text-center max-w-3xl mx-auto">
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">
-          Simplify Complex <span className="text-blue-600">Legal Documents</span> with AI
-        </h1>
-        <p className="text-base sm:text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
-          Transform complicated legal jargon into clear, understandable language. Extract key clauses, classify documents, and understand your contracts in seconds.
-        </p>
-
-        
-
-        
-        <div className="border border-dashed border-gray-300 p-8 rounded-xl bg-white shadow-lg flex flex-col items-center">
-          <div className="bg-gray-100 p-4 rounded-full mb-4">
-            <svg
-              className="w-8 h-8 text-gray-500"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-              />
-            </svg>
-          </div>
-          <h3 className="text-lg sm:text-xl font-semibold mb-2">
-            Drag & Drop Your Legal Document
-          </h3>
-          <p className="text-sm text-gray-500 mb-6">
-            Support for PDF, DOC, and DOCX files up to 10MB
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="text-center mb-16 animate-fade-in-up">
+          <h1 className="text-responsive-xl font-bold text-gray-900 mb-6 leading-tight">
+            Know Your Basic <span className="text-gradient">Legal Rights</span>
+          </h1>
+          <p className="text-xl sm:text-2xl text-gray-600 mb-10 max-w-4xl mx-auto leading-relaxed">
+            Navigate the legal landscape with confidence. Access essential legal information presented in clear, understandable language.
           </p>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2">
-            <svg
-              className="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"
+          
+          {/* Call to Action Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+            <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg">
+              Start Learning
+            </button>
+            <button className="bg-white text-blue-600 border-2 border-blue-600 hover:bg-blue-50 font-semibold py-4 px-8 rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg">
+              Browse Topics
+            </button>
+          </div>
+
+          {/* Search Bar */}
+          <div className="max-w-2xl mx-auto animate-fade-in-up" style={{animationDelay: '0.4s'}}>
+            <div className="relative">
+              <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                <svg className="h-6 w-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </div>
+              <input
+                type="text"
+                placeholder="Search legal topics, terms, or categories..."
+                className="block w-full pl-12 pr-4 py-4 border border-gray-300 rounded-lg leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-lg shadow-lg"
               />
-            </svg>
-            Upload & Analyze
-          </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Document Upload Section */}
+        <div className="max-w-4xl mx-auto animate-fade-in-up" style={{animationDelay: '0.6s'}}>
+          <DocumentUpload />
         </div>
       </div>
 
-     
-
-   
+      {/* Floating Chatbot Icon */}
       <div className="fixed bottom-6 right-6 z-20">
-        <button className="bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition-colors duration-200">
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-            />
-          </svg>
-        </button>
+        <ChatbotIcon />
       </div>
     </div>
   );

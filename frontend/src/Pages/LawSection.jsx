@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import LegalCategories from '../sections/LegalCategories';
+import ChatbotIcon from '../components/ChatbotIcon';
+import Footer from '../components/Footer';
 
 const LawSection = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -182,6 +184,14 @@ const LawSection = () => {
           </div>
         </div>
       </div>
+
+      {/* Floating Chatbot Icon */}
+      <div className="fixed bottom-6 right-6 z-20">
+        <ChatbotIcon />
+      </div>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };
