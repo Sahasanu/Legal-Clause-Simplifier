@@ -1,4 +1,4 @@
-import checkDocument from "../services/gemini.service.js";
+import checkDocument from "../services/ai.service.js";
 
 async function uploadDocumentController(req, res) {
   try {
